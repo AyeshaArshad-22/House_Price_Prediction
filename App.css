@@ -1,0 +1,137 @@
+     1	/* Custom styles for House Price Predictor */
+     2	
+     3	/* Smooth scrolling */
+     4	html {
+     5	  scroll-behavior: smooth;
+     6	}
+     7	
+     8	/* Custom slider styling */
+     9	[data-slot="slider-track"] {
+    10	  background: linear-gradient(to right, #e2e8f0, #e2e8f0);
+    11	}
+    12	
+    13	[data-slot="slider-range"] {
+    14	  background: linear-gradient(to right, #10b981, #059669);
+    15	}
+    16	
+    17	[data-slot="slider-thumb"] {
+    18	  border: 2px solid #10b981;
+    19	  background: white;
+    20	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    21	}
+    22	
+    23	[data-slot="slider-thumb"]:hover {
+    24	  background: #10b981;
+    25	}
+    26	
+    27	/* Card hover effects */
+    28	.card-hover {
+    29	  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    30	}
+    31	
+    32	.card-hover:hover {
+    33	  transform: translateY(-2px);
+    34	  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    35	}
+    36	
+    37	/* Animation for results */
+    38	@keyframes slideIn {
+    39	  from {
+    40	    opacity: 0;
+    41	    transform: translateY(20px);
+    42	  }
+    43	  to {
+    44	    opacity: 1;
+    45	    transform: translateY(0);
+    46	  }
+    47	}
+    48	
+    49	.animate-slide-in {
+    50	  animation: slideIn 0.4s ease-out forwards;
+    51	}
+    52	
+    53	/* Gradient text */
+    54	.gradient-text {
+    55	  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    56	  -webkit-background-clip: text;
+    57	  -webkit-text-fill-color: transparent;
+    58	  background-clip: text;
+    59	}
+    60	
+    61	/* Custom scrollbar */
+    62	::-webkit-scrollbar {
+    63	  width: 8px;
+    64	  height: 8px;
+    65	}
+    66	
+    67	::-webkit-scrollbar-track {
+    68	  background: #f1f5f9;
+    69	}
+    70	
+    71	::-webkit-scrollbar-thumb {
+    72	  background: #cbd5e1;
+    73	  border-radius: 4px;
+    74	}
+    75	
+    76	::-webkit-scrollbar-thumb:hover {
+    77	  background: #94a3b8;
+    78	}
+    79	
+    80	/* Chart tooltip customization */
+    81	.recharts-tooltip-wrapper {
+    82	  outline: none !important;
+    83	}
+    84	
+    85	/* Button hover animation */
+    86	button {
+    87	  transition: all 0.2s ease;
+    88	}
+    89	
+    90	button:active {
+    91	  transform: scale(0.98);
+    92	}
+    93	
+    94	/* Input focus states */
+    95	input:focus,
+    96	select:focus,
+    97	textarea:focus {
+    98	  outline: none;
+    99	  ring: 2px;
+   100	  ring-color: #10b981;
+   101	}
+   102	
+   103	/* Badge styling */
+   104	.badge-pulse {
+   105	  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+   106	}
+   107	
+   108	@keyframes pulse {
+   109	  0%, 100% {
+   110	    opacity: 1;
+   111	  }
+   112	  50% {
+   113	    opacity: 0.7;
+   114	  }
+   115	}
+   116	
+   117	/* Responsive adjustments */
+   118	@media (max-width: 640px) {
+   119	  .responsive-grid {
+   120	    grid-template-columns: 1fr;
+   121	  }
+   122	}
+   123	
+   124	/* Print styles */
+   125	@media print {
+   126	  header,
+   127	  footer,
+   128	  button {
+   129	    display: none !important;
+   130	  }
+   131	  
+   132	  .card {
+   133	    box-shadow: none !important;
+   134	    border: 1px solid #e2e8f0 !important;
+   135	  }
+   136	}
+   137	
